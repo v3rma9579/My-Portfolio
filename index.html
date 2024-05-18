@@ -33,7 +33,7 @@
     </header>
     <section class="home" id="home">
         <div class="home-content">
-            <h3>Hello,It's Me</h3>
+            <h3>Hello, It's Me</h3>
             <h1>Shubham Verma</h1>
             <h3>And I'm a <span class="multiple-text"></span></h3>
             <div class="social-media">
@@ -137,7 +137,7 @@
 
 
     <section class="portfolio" id="portfolio">
-        <h2 class="heading"><i class="fas fa-laptop-code"></i>  Latest <span> Project</span></h2>
+        <h2 class="heading"><i class="fas fa-laptop-code"></i> Latest <span> Project</span></h2>
         <div class="portfolio-container">
             <div class="portfolio-box">
                 <img src="myproject/image/portfolio-screenshot.png" alt="">
@@ -177,34 +177,34 @@
     <section class="contact" id="contact">
 
         <h2 class="heading"><i class="fas fa-headset"></i> Get in <span>Touch</span></h2>
-
         <div class="container">
             <div class="content">
                 <div class="image-box">
                     <img draggable="false" src="./myproject/image/contact1.png" alt="">
                 </div>
-                <form id="contact-form">
-
+                <form id="contact-form" action="https://formsubmit.co/kalmanshan76@gmail.com" method="POST">
                     <div class="form-group">
                         <div class="field">
-                            <input type="text" name="name" placeholder="Name" required>
+                            <input type="text" name="Name" placeholder="Name" required>
                             <i class='fas fa-user'></i>
                         </div>
                         <div class="field">
-                            <input type="text" name="email" placeholder="Email" required>
+                            <input type="text" name="Email" id="email" placeholder="Email" required>
                             <i class='fas fa-envelope'></i>
                         </div>
                         <div class="field">
-                            <input type="text" name="phone" placeholder="Phone">
+                            <input type="text" name="Phone" placeholder="Phone">
                             <i class='fas fa-phone-alt'></i>
                         </div>
                         <div class="message">
-                            <textarea placeholder="Message" name="message" required></textarea>
+                            <textarea placeholder="Message" name="Message" required></textarea>
                             <i class="fas fa-comment-dots"></i>
                         </div>
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
                     </div>
                     <div class="button-area">
-                        <button type="submit">
+                        <button type="submit" value="submit">
                             Submit <i class="fa fa-paper-plane"></i></button>
                     </div>
                 </form>
@@ -225,11 +225,11 @@
                 <h3>Contact Info</h3>
                 <p> <i class="fas fa-phone"></i>+91 XXX-XXX-XXXX</p>
                 <p> <i class="fas fa-envelope"></i>shubhamverma286008@gmail.com</p>
-                <p> <i class="fas fa-map-marked-alt"></i>Hazaribag, Jharkhand, India-825301</p>
+                <p> <i class="fas fa-map-marker-alt"></i>Hazaribag, Jharkhand, India-825301</p>
                 <div class="share">
 
-                    <a href="https://www.linkedin.com/in/shubham-verma-b1a2b6238/" class="fab fa-linkedin" aria-label="LinkedIn"
-                        target="_blank"></a>
+                    <a href="https://www.linkedin.com/in/shubham-verma-b1a2b6238/" class="fab fa-linkedin"
+                        aria-label="LinkedIn" target="_blank"></a>
                     <a href="https://github.com/v3rma9579" class="fab fa-github" aria-label="GitHub"
                         target="_blank"></a>
                     <a href="mailto:shubhamverma286008@gmail.com" class="fas fa-envelope" aria-label="Mail"
@@ -250,24 +250,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="script.js"></script>
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbzFPVGxI-75Ilkm2z_EMuI9ubPlp8-7dQmMzzdPiIunLPPzj3bcY1ohMdT_DfZ3zPwhTA/exec'
-        const form = document.forms['submit-to-google-sheet']
-        const msg = document.getElementById("msg")
-
-        form.addEventListener('submit', e => {
-            e.preventDefault()
-            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                .then(response => {
-                    msg.innerHTML = "Message sent successfully"
-                    setTimeout(function () {
-                        msg.innerHTML = ""
-                    }, 5000)
-                    form.reset()
-                })
-                .catch(error => console.error('Error!', error.message))
-        })
-    </script>
+   
 
 </body>
 
